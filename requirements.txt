@@ -10,4 +10,4 @@ scipy==1.4.1
 soupsieve==1.9.5
 threadpoolctl==2.1.0
 Werkzeug==1.0.1
-cv2==4.2.0
+cv2
