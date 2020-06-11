@@ -46,17 +46,18 @@ def upload():
 
         # Make prediction
         preds = model_predict(file_path, model)
-        result_a = str((preds[0][0]*100).round(2))  + str('%')
-        result_b = str(((1-preds[0][0])*100).round(2))  + str('%')            
+        result = str((preds[0][0]*100).round(2))  + str('%')
+                    
         if preds>0.45:
             
-            return str('The patient is diagnosed with Pneumonia with a probability of ') + result_a 
+            return str('The patient is diagnosed with Pneumonia. Probability: ') + result 
         else:
             
-            return str('The patient is ')+ result_b + str(' Normal')
+            return str('The patient\'s report is Normal')
     return None
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
